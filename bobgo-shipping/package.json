@@ -1,0 +1,33 @@
+{
+  "name": "bobgo-shipping",
+  "description": "Bob Go smart shipping solution for WooCommerce",
+  "version": "4.0.58",
+  "author": "Bob Group",
+  "license": "GPL-2.0-or-later",
+  "scripts": {
+    "block:build": "wp-scripts build block/src/index.js --output-path=block/build",
+    "block:start": "wp-scripts start block/src/index.js --output-path=block/build",
+    "assets:build": "wp-scripts build assets/src/bobgo-shipping.js assets/src/checkout-suburb.js assets/src/custom-shipping-description.js --output-path=assets/build && rm ./assets/build/bobgo-shipping.asset.php && rm ./assets/build/checkout-suburb.asset.php && rm ./assets/build/custom-shipping-description.asset.php",
+    "assets:start": "wp-scripts start assets/src/bobgo-shipping.js assets/src/checkout-suburb.js assets/src/custom-shipping-description.js --output-path=assets/build",
+    "build:css": "sass assets/src/bobgo-shipping.scss assets/build/bobgo-shipping.css",
+    "build": "run-s block:build assets:build build:css",
+    "start": "run-p block:start assets:start",
+    "format:js": "wp-scripts format-js",
+    "lint:css": "wp-scripts lint-style",
+    "lint:js": "wp-scripts lint-js",
+    "packages-update": "wp-scripts packages-update",
+    "prepare": "husky install",
+    "update-version-files": "node update-version.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm config set git-tag-version false && npm version patch && npm run update-version-files && git add package.json bobgo-shipping.php readme.txt && pretty-quick --staged"
+    }
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^30.24.0",
+    "husky": "^9.1.7",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.93.2"
+  }
+}

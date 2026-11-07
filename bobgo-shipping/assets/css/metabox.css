@@ -1,0 +1,320 @@
+/**
+ * Bob Go Meta Box Styles
+ *
+ * @package BobGo_Shipping
+ */
+
+/* Meta box container */
+.bobgo-metabox {
+	font-size: 13px;
+}
+
+/* Header */
+.bobgo-metabox-header {
+	margin-bottom: 12px;
+	padding-bottom: 12px;
+	border-bottom: 1px solid #dcdcde;
+}
+
+.bobgo-metabox-ref {
+	margin-bottom: 4px;
+}
+
+.bobgo-metabox-ref a {
+	text-decoration: none;
+}
+
+.bobgo-metabox-sync-status {
+	margin-bottom: 4px;
+}
+
+.bobgo-metabox-last-synced {
+	color: #787c82;
+	font-size: 12px;
+	margin-bottom: 8px;
+}
+
+.bobgo-metabox-actions {
+	display: flex;
+	gap: 6px;
+	flex-wrap: wrap;
+}
+
+/* Badges */
+.bobgo-badge {
+	display: inline-block;
+	padding: 2px 8px;
+	border-radius: 3px;
+	font-size: 11px;
+	font-weight: 600;
+	line-height: 1.5;
+	white-space: nowrap;
+}
+
+.bobgo-badge--synced,
+.bobgo-badge--success {
+	background: #d4edda;
+	color: #155724;
+}
+
+.bobgo-badge--info {
+	background: #c8d7e1;
+	color: #2e4453;
+}
+
+.bobgo-badge--warning {
+	background: #f8dda7;
+	color: #94660c;
+}
+
+.bobgo-badge--failed,
+.bobgo-badge--error {
+	background: #fce4e4;
+	color: #8a1f11;
+}
+
+.bobgo-badge--pending,
+.bobgo-badge--neutral {
+	background: #f0f0f1;
+	color: #50575e;
+}
+
+/* Shipment groups */
+.bobgo-shipment {
+	margin-bottom: 12px;
+	padding: 10px;
+	background: #f6f7f7;
+	border: 1px solid #dcdcde;
+	border-radius: 4px;
+}
+
+.bobgo-shipment-header {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	gap: 4px 8px;
+	margin-bottom: 4px;
+}
+
+.bobgo-shipment-tracking {
+	flex: 1 1 auto;
+	min-width: 0;
+	font-size: 13px;
+	font-weight: 600;
+	overflow-wrap: anywhere;
+}
+
+.bobgo-shipment-tracking a {
+	color: #2271b1;
+	text-decoration: none;
+}
+
+.bobgo-shipment-tracking a:hover,
+.bobgo-shipment-tracking a:focus {
+	color: #135e96;
+	text-decoration: underline;
+}
+
+.bobgo-shipment-badges {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: 4px;
+}
+
+.bobgo-shipment-meta {
+	color: #50575e;
+	font-size: 12px;
+	line-height: 1.45;
+	margin-bottom: 8px;
+}
+
+.bobgo-shipment-extra {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px 12px;
+	color: #50575e;
+	font-size: 12px;
+	line-height: 1.45;
+	margin-bottom: 8px;
+}
+
+.bobgo-shipment-items {
+	margin-top: 6px;
+	padding-left: 12px;
+}
+
+.bobgo-shipment-item {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	font-size: 12px;
+	color: #1d2327;
+	padding: 2px 0;
+}
+
+/* Timeline toggle */
+.bobgo-timeline-toggle {
+	margin-top: 8px;
+	font-size: 12px;
+	color: #2271b1;
+	cursor: pointer;
+	user-select: none;
+}
+
+.bobgo-timeline-toggle:hover {
+	color: #135e96;
+}
+
+/* Timeline */
+.bobgo-timeline {
+	margin-top: 8px;
+	padding-left: 8px;
+}
+
+.bobgo-timeline-event {
+	display: flex;
+	align-items: flex-start;
+	padding: 4px 0;
+	position: relative;
+}
+
+.bobgo-timeline-event:not(:last-child)::before {
+	content: "";
+	position: absolute;
+	left: 5px;
+	top: 16px;
+	bottom: -4px;
+	width: 1px;
+	background: #c3c4c7;
+}
+
+.bobgo-timeline-dot {
+	width: 11px;
+	height: 11px;
+	border-radius: 50%;
+	border: 2px solid #2271b1;
+	flex-shrink: 0;
+	margin-right: 8px;
+	margin-top: 2px;
+}
+
+.bobgo-timeline-dot--filled {
+	background: #2271b1;
+}
+
+.bobgo-timeline-dot--hollow {
+	background: #fff;
+}
+
+.bobgo-timeline-text {
+	font-size: 12px;
+	line-height: 1.4;
+}
+
+.bobgo-timeline-time {
+	color: #787c82;
+	font-size: 11px;
+}
+
+/* Unfulfilled section */
+.bobgo-unfulfilled {
+	margin-top: 12px;
+	padding: 10px;
+	background: #fcf9e8;
+	border: 1px solid #f0c33c;
+	border-radius: 4px;
+}
+
+.bobgo-unfulfilled strong {
+	display: block;
+	margin-bottom: 4px;
+}
+
+.bobgo-unfulfilled-item {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	font-size: 12px;
+	padding: 2px 0;
+}
+
+/* Product thumbnails */
+.bobgo-item-thumb {
+	width: 32px;
+	height: 32px;
+	border-radius: 3px;
+	overflow: hidden;
+	flex-shrink: 0;
+}
+
+.bobgo-item-thumb img {
+	width: 32px;
+	height: 32px;
+	object-fit: cover;
+	display: block;
+}
+
+.bobgo-item-text {
+	flex: 1;
+	min-width: 0;
+}
+
+/* Footer */
+.bobgo-metabox-footer {
+	margin-top: 12px;
+	padding-top: 8px;
+	border-top: 1px solid #dcdcde;
+	color: #787c82;
+	font-size: 11px;
+}
+
+/* Orders list column badges */
+.bobgo-col-badge {
+	display: inline-block;
+	padding: 2px 8px;
+	border-radius: 3px;
+	font-size: 11px;
+	font-weight: 600;
+	white-space: nowrap;
+}
+
+.bobgo-col-badge--delivered {
+	background: #d4edda;
+	color: #155724;
+}
+
+.bobgo-col-badge--shipped {
+	background: #c8d7e1;
+	color: #2e4453;
+}
+
+.bobgo-col-badge--partial {
+	background: #f8dda7;
+	color: #94660c;
+}
+
+.bobgo-col-badge--pending {
+	background: #f0f0f1;
+	color: #50575e;
+}
+
+.bobgo-col-badge--failed {
+	background: #fce4e4;
+	color: #8a1f11;
+}
+
+/* Sync-health "Synced" — a blue tone to read as connectivity health, distinct
+   from the green/yellow fulfillment-state badges above. */
+.bobgo-col-badge--synced {
+	background: #e1ecf7;
+	color: #2b5b87;
+}
+
+/* Not-yet-synced — a muted dash rather than a coloured pill. */
+.bobgo-col-badge--none {
+	background: transparent;
+	color: #8c8f94;
+	padding-left: 0;
+	padding-right: 0;
+	font-weight: 400;
+}
